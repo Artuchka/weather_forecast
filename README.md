@@ -11,7 +11,8 @@ Differences from `main` branch:
   - simpler forecast design
   - forecast for 10 days hardcoded
 
-Feature added: able to type in city
+Feature added:
+  - able to type in city
 
 ![image](https://user-images.githubusercontent.com/42734308/183637025-ce72aa79-39b3-4ddb-93a6-2c622f7bd737.png)
 
