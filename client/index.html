@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Weather App</title>
+  <script src="client.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body class="">
+  
+
+  <form action="" id="settings" class="settings">
+    <div>
+      <label for="city">Type City</label>
+      <input type="text" id="city" class="city">
+    </div>
+  </form>
+
+  <div class="blurred" id="outputWrapper">
+    <section class="day-section" id="container">
+      <div class="day-card">
+        <img class="weather-icon" src="http://openweathermap.org/img/wn/10d.png">
+        <div class="day-card-date">Monday</div>
+        <div>23&deg;</div>
+      </div>
+    </section>
+  </div>
+
+  <template id="dayCardTemplate"> 
+    <div class="day-card">
+      <div data-date class="day-card-date">Monday</div>
+      <img data-icon class="weather-icon" src="http://openweathermap.org/img/wn/10d.png">
+      <div>
+        <div><span data-temp-min>23</span>&deg;</div>
+        &#8212;
+        <div><span data-temp-max>23</span>&deg;</div>
+      </div>
+      <div><img src="./img/uv.svg" alt="uvIndexIcon"><span data-uv></span></div>
+      <div><img src="./img/sunrise.svg" alt="sunriseIcon"><span data-sunrise></span></div>
+      <div><img src="./img/sunset.svg" alt="sunsetIcon"><span data-sunset></span></div>
+    </div>
+  </template>
+</body>
+</html>
