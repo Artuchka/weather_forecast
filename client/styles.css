@@ -6,7 +6,7 @@ body {
   margin: 0;
   background-color: hsl(200, 100%, 85%);
   color: hsl(200, 100%, 10%);
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .blurred {
@@ -81,7 +81,7 @@ body {
 
 .day-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 75px);
+  grid-template-columns: repeat(auto-fit, 150px);
   gap: .5rem;
   justify-content: center;
   flex-wrap: wrap;
@@ -97,9 +97,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5em;
   border: 1px solid hsl(200, 100%, 10%);
   border-radius: .25rem;
   padding: .25rem;
+}
+
+.day-card img {
+  width: 40px;
+}
+
+.day-card .weather-icon {
+  border-radius: 50%;
+}
+
+.day-card > div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 .hour-section {
@@ -119,3 +136,19 @@ body {
 .hour-row > td {
   padding: .25rem .5rem;
 }
+
+.settings {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.city {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+}
+
