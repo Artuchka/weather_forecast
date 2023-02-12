@@ -25857,8 +25857,10 @@ function positionSuccess(_ref) {
   getWeather(coords.latitude, coords.longitude);
 }
 
+var baseUrl = "https://weather-server-xhy2.onrender.com";
+
 function getWeather(lat, lon) {
-  _axios.default.get("http://localhost:3001/weather", {
+  _axios.default.get("".concat(baseUrl, "/weather"), {
     params: {
       lat: lat,
       lon: lon
@@ -26007,7 +26009,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37555" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39805" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

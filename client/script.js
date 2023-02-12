@@ -10,9 +10,10 @@ function positionSuccess({ coords }) {
 	getWeather(coords.latitude, coords.longitude)
 }
 
+const baseUrl = "https://weather-server-xhy2.onrender.com"
 function getWeather(lat, lon) {
 	axios
-		.get("http://localhost:3001/weather", {
+		.get(`${baseUrl}/weather`, {
 			params: {
 				lat,
 				lon,
@@ -53,7 +54,10 @@ function renderDailyWeather(daily) {
 		const newDay = dayCardTemplate.content.cloneNode(true)
 
 		setValue("temp", day.temp, { parent: newDay, extra: "" })
-		setValue("date", formatDay(day.timestamp), { parent: newDay, extra: "" })
+		setValue("date", formatDay(day.timestamp), {
+			parent: newDay,
+			extra: "",
+		})
 		newDay.querySelector("[data-icon]").src = getIconURL(day.icon)
 
 		dayilySection.append(newDay)
@@ -71,7 +75,10 @@ function renderHourlyWeather(hourly) {
 		setValue("fl", hour.feelsLike, { parent: newHour, extra: "" })
 		setValue("wind", hour.windSpeed, { parent: newHour, extra: "" })
 		setValue("pop", hour.pop, { parent: newHour, extra: "" })
-		setValue("date", formatDay(hour.timestamp), { parent: newHour, extra: "" })
+		setValue("date", formatDay(hour.timestamp), {
+			parent: newHour,
+			extra: "",
+		})
 		setValue("hour", formatHour(hour.timestamp), {
 			parent: newHour,
 			extra: "",
